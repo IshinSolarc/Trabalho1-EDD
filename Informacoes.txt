@@ -1,0 +1,23 @@
+Aluno:
+Carlos Eduardo Nishi - XXXXXX
+
+Bugs conhecidos:
+Se em algum momento o programa executar o valor 2147483647(max int) gerara erro, já que é o retorno de um pop de pilha vazia.
+Numeros maiores de 10 algarismos gerarão bugs já que o limite de entrada por elemento é de 10 caracteres.
+Não tem checagem para saber se o usuario inseriu um numero valido, então pode ocorrer leitura de string como decimais no programa.
+
+Detalhes:
+Ambas os tipos de filas fazem alocação de string que servem como leitura antes de o valor ser colocado na pilha.
+Os dados de ambas as pilhas são em inteiros.
+
+Implementação:
+O programa primeiro lê o numero de programas e cria as filas e pilhas referentes a cada um.
+Ocorre a leitura dos elementos e são colocados na fila em formato de string.
+O programa começa a trabalhar em loop até não ocorrer mais operações, e não ocorrera mais operações se todos os programas chegarem ao fim.
+A operação começa com um pop da fila em um ponteiro de char retPopFila.
+E então faz a checagem para saber se é um operador aritmetico, caso não seja ele enviara para a pilha em um numero inteiro.
+Caso seja um operador aritmetico, ele fara dois pops da pilha e checara se o retorno deles é invalido.
+Se os retornos forem validos ele fara as operações conforme o enunciado.
+Quando acabar acaba cada operação, ele libera a string alocada em que retPopFila aponta.
+Quando acabar o trabalho, o programa fara a limpeza de filas e pilhas para liberar a memoria do programa.
+O programa finaliza retornando 1.
