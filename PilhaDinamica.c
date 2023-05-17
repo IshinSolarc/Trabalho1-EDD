@@ -26,7 +26,7 @@ void pushPilha(pilha* Pilha, int x)
 int popPilha(pilha* Pilha)
 {
     if(vaziaPilha(Pilha))
-        return 2147483647;
+        return 2147483647; // valor de erro de pop em pilha vazia
     int x = Pilha->topo->info;
     nodo * aux = Pilha->topo->prox;
     free(Pilha->topo);
