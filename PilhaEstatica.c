@@ -23,7 +23,7 @@ void pushPilha(pilha* Pilha, int x)
 int popPilha(pilha* Pilha)
 {
     if(vaziaPilha(Pilha))
-        return 2147483647;
+        return 2147483647; // valor de pop errado em pilha vazia
     int x = Pilha->info[Pilha->topo];
     Pilha->topo--;
     return x;
